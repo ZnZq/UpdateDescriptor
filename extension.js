@@ -4,7 +4,8 @@ const path = require("path");
 
 function activate() {
 	vscode.workspace.onDidSaveTextDocument(function (document) {
-		if (document.languageId === "javascript" && document.uri.scheme === "file") {
+		if ((document.languageId === "javascript" || document.languageId === "csharp") &&
+			document.uri.scheme === "file") {
 			let filePath = path.dirname(document.fileName);
 			let descriptorFile = path.join(filePath, "descriptor.json");
 			fs.exists(descriptorFile, function (exist) {
