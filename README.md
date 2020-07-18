@@ -1,1 +1,1 @@
-Update "ModifiedOnUtc" in descriptor.json after save .js file
+Update "ModifiedOnUtc" in descriptor.json after save [.js, .cs] file
